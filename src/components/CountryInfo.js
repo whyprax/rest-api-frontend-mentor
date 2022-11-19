@@ -5,7 +5,6 @@ import { apiURL } from "../util/api";
 const CountryInfo = () => {
   const [country, setCountry] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
 
   const { countryName } = useParams();
 
@@ -22,7 +21,6 @@ const CountryInfo = () => {
         setLoading(false);
       } catch (error) {
         setLoading(false);
-        setError(error.message);
       }
     };
 

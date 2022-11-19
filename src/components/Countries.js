@@ -7,7 +7,6 @@ import Country from "./Country";
 const Countries = () => {
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
 
   const getAllCountries = async () => {
     try {
@@ -22,7 +21,6 @@ const Countries = () => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      setError(error.message);
     }
   };
 
@@ -37,7 +35,6 @@ const Countries = () => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      setError(error.message);
     }
   };
 
@@ -61,7 +58,6 @@ const Countries = () => {
       }
     } catch (error) {
       setLoading(false);
-      setError(error.message);
     }
   };
 
